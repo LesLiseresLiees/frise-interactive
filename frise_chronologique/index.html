@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frise Chronologique IRAË</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Frise Chronologique IRAË</h1>
+    <div id="toolbar">
+      <select id="type">
+        <option value="event">Événement</option>
+        <option value="span">Événement étalé</option>
+        <option value="period">Période</option>
+        <option value="life">Vie</option>
+      </select>
+      <input type="text" id="name" placeholder="Nom" />
+      <input type="number" id="start" placeholder="Début" />
+      <input type="number" id="end" placeholder="Fin (optionnel)" />
+      <input type="color" id="color" value="#cccccc" />
+      <button onclick="addElement()">Ajouter</button>
+      <button onclick="saveJSON()">💾 Sauvegarder</button>
+      <input type="file" id="loadFile" onchange="loadJSON(event)" />
+    </div>
+  </header>
+
+  <main>
+    <div id="timeline-container">
+      <div id="timeline"></div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
